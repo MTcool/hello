@@ -1,0 +1,14 @@
+
+.test {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+/* 数据分析app样式 */
+.data_main {
+    /* background-color: var(--color_gray_blue); */
+    display: grid;
+    grid-template-rows: 3em auto;
+    gap: var(--default_gap);
+}

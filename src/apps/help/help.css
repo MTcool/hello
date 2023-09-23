@@ -1,0 +1,5 @@
+/* 设置条目 */
+.help_main {
+    display: grid;
+    gap: calc(var(--default_gap));
+}

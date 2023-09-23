@@ -1,0 +1,34 @@
+.btn {
+    border: 0;
+    border-radius: var(--border_radius_default);
+    background-color: var(--color_blue);
+
+    /* 字体 */
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    transition: all var(--anim_time_fast) linear;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: var(--color_blue);
+    color: aliceblue;
+
+    /* 阴影 => |水平阴影（正右负左）|垂直阴影（正下负上）|阴影模糊强度|阴影强度|*/
+    box-shadow: var(--shadow_blue);
+
+    /* 小手 */
+    cursor: pointer;
+}
+
+/* 被点击时的样式 */
+.btn:active {
+    /* 位移 => |水平位移（正右，负左）|垂直位移（正下，负上）| */
+    transform: translate(0em, .2em);
+    /* 字体 */
+    font-weight: bold;
+}

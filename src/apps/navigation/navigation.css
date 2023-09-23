@@ -1,0 +1,51 @@
+:root {
+    /* ----------------------导航栏个性化设置------------------------------ */
+    /* 菜单条目高度*/
+    --nav_menu_height: 3em;
+    /* 导航栏折叠状态下宽度*/
+    --nav_width_collapsed: 2em;
+    --nav_width_collapsed_out: 3em;
+    /* 导航栏非折叠状态下宽度*/
+    --nav_width_uncollapsed: 200px;
+}
+
+/* =================================自定义部分================================ */
+
+/* 导航栏-总容器 */
+.navigation_container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 10em;
+}
+
+/* 导航栏-上部 */
+.navigation_top {
+    width: calc(100% - 2 * var(--default_padding));
+    height: calc(100% - 2 * var(--default_padding));
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: 2.5em;
+    gap: var(--default_padding);
+    padding: var(--default_padding);
+    padding-top: 1em;
+
+    border-radius: var(--border_radius_default);
+    transition: all var(--anim_time_default) linear;
+    outline: none !important;
+}
+
+/* 导航栏-下部 */
+.navigation_buttom {
+    width: calc(100% - 2 * var(--default_padding));
+    height: calc(100% - 2 * var(--default_padding));
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: 2.5em;
+    gap: var(--default_padding);
+    padding: var(--default_padding);
+    /* padding-top: calc(5 * var(--default_padding)); */
+
+    border-radius: var(--border_radius_default);
+    transition: all var(--anim_time_default) linear;
+    outline: none !important;
+}

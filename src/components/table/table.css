@@ -1,0 +1,122 @@
+:root {
+    --height: 3em;
+}
+
+/* 表格 */
+.table_main {
+    width: calc(100% - 2 * var(--default_padding));
+    height: calc(100% - 2 * var(--default_padding));
+    /* position: absoflute; */
+
+    display: grid;
+    gap: var(--default_gap);
+    grid-auto-rows: auto;
+    grid-template-rows: var(--default_height_row) auto;
+    transition: all var(--anim_time_fast) linear;
+    background-color: var(--color_gray);
+    overflow: hidden;
+    font-size: 1em;
+    border-radius: var(--border_radius_big);
+    padding: var(--default_padding);
+    box-sizing: border-box;
+}
+
+/* 表格-标题 */
+.table_title {
+    height: var(--height);
+
+    display: grid;
+    gap: var(--default_gap);
+    background-color: var(--color_white);
+    border-radius: var(--border_radius_big);
+    padding: 0 calc(var(--default_padding) * 2) 0 calc(var(--default_padding) * 2);
+
+    font-weight: bolder;
+    position: sticky;
+    top: 0;
+}
+
+/* 表格-标题-标签 */
+.table_title_label {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 9fr 1fr;
+    border-radius: var(--border_radius_default);
+    user-select: none;
+}
+
+/* 表格-标题-标签 */
+.table_title_label_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--border_radius_default);
+    user-select: none;
+}
+
+/* 标题列排序标签 */
+.table_title_sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 标题列排序标签 */
+.table_title_sort:hover {
+    /* background-color: var(--color_gray); */
+    cursor: pointer;
+}
+
+/* 表格-数据 */
+.table_data {
+    display: grid;
+    position: relative;
+    overflow: auto;
+    border-radius: var(--border_radius_default);
+    padding: 0 calc(var(--default_padding) * 2) 0 calc(var(--default_padding) * 2);
+    gap: var(--default_gap);
+}
+
+/* 表格-数据 */
+.table_row {
+    /* height: 100%; */
+    min-height: 2.5em;
+    display: grid;
+    /* grid-auto-columns: 2.5em; */
+    gap: var(--default_gap);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color_white);
+    border-radius: var(--border_radius_big);
+    transition: all var(--anim_time_default) linear;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/* 表格行悬浮效果 */
+.table_row:hover {
+    background-color: var(--color_deep_gray);
+    /* scale(水平，垂直) */
+    transform: scale(1.01, 1.01);
+}
+
+/* 表格-字段单元格 */
+.table_col {
+    height: 100%;
+    gap: var(--default_gap);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--default_padding) 0 var(--default_padding);
+}
+
+/* ------------------------FakeScroll-------------------------- */
+
+.fake_table_data {
+    display: grid;
+    position: relative;
+    overflow: auto;
+    border-radius: var(--border_radius_default);
+    /* padding: 0 calc(var(--default_padding) * 2) 0 calc(var(--default_padding) * 2); */
+}

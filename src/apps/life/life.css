@@ -1,0 +1,49 @@
+:root {
+    --font_size_big: 12vw;
+    --font_size_normal: 4vw;
+}
+
+/* 生活信息应用样式 */
+.life_main {
+    display: flex;
+}
+
+/* 生活信息容器样式 */
+.life_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 生活信息字体 */
+.life_text {
+    /* width: 100%; */
+    /* height: 100%; */
+    color: var(--color_blue);
+    font-family: var(--font_jetbrains);
+    font-size: var(--font_size_big);
+    font-weight: bolder;
+}
+
+.life_text::selection {
+    background-color: var(--color_yellow);
+}
+
+/* 生活信息-时间 */
+.life_time {}
+
+/* 生活信息-时间-年月日 */
+.life_day {
+    font-size: var(--font_size_normal);
+}
+
+/* 生活信息-时间-时分秒 */
+.life_hour {}
+
+/* 生活信息-时间-毫秒 */
+.life_mill {
+    font-size: var(--font_size_normal);
+}

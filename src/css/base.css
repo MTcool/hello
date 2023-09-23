@@ -1,0 +1,103 @@
+/* 设置全局 CSS 常量 */
+:root {
+    /* ----------------------单位------------------------------ */
+
+    /* 圆角 */
+    --border_radius_default: 0.2em;
+    --border_radius_big: 0.5em;
+    /* 默认间隙 */
+    --default_gap: .5em;
+    /* 默认 padding*/
+    --default_padding: .5em;
+    /* 中等 padding*/
+    --mid_padding: 1em;
+    /* 行高 */
+    --default_height_row: 3em;
+
+    /* ----------------------时间------------------------------ */
+
+    /* 默认动画时间 */
+    --anim_time_fast: 0.1s;
+    --anim_time_default: 0.25s;
+    --anim_time_slow: 0.3s;
+
+    /* ----------------------颜色------------------------------ */
+    --color_yellow: rgb(250, 216, 36);
+    --color_orange: rgb(247, 143, 0);
+    --color_black: rgb(0, 0, 0);
+    --color_white: rgb(255, 255, 255);
+    --color_blue: rgb(29, 33, 45);
+    --color_gray: rgb(241, 243, 244);
+    --color_deep_gray: rgb(222, 222, 222);
+    --color_gray_blue: rgb(216, 220, 224);
+    --color_shallow_yellow: rgb(255, 241, 167);
+    --color_shallow_blue: rgb(99, 114, 136);
+
+    /* 阴影 */
+    --color_backGroundShadow: rgba(29, 33, 45, 0.9);
+    --shadow_blue: 0em 0em .15em .02em var(--color_blue);
+    --shadow_yellow: 0em 0em .15em .02em var(--color_yellow);
+
+    /* ----------------------字体------------------------------ */
+
+    --font_sans: 'Source Han Sans SC VF';
+    --font_jetbrain: 'JetBrains Mono Bold';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    background-color: var(--color_blue);
+    outline: none !important;
+}
+
+/* ----------------------app相关------------------------------ */
+
+/* app */
+.app_main {
+    width: calc(100% - 2 * var(--default_padding));
+    height: calc(100% - 2 * var(--default_padding));
+    padding: var(--default_padding);
+    outline: none !important;
+    position: absolute;
+}
+
+/* app容器 */
+.app_container {
+    height: 100vh;
+    /* margin: var(--default_padding); */
+    /* height: calc(100vh - 2 * var(--default_padding)); */
+    background-color: var(--color_white);
+    outline: none !important;
+    position: relative;
+
+}
+
+
+/* ----------------------app按钮组相关------------------------------ */
+
+/* 音频应用的按钮们 */
+.grids_btn {
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: .5em;
+    /* background-color: aliceblue; */
+    padding: var(--default_padding);
+    border: 0;
+    border-radius: var(--border_radius_default);
+
+    position: sticky;
+    top: 0;
+}
+
+/* ----------------------字体相关------------------------------ */
+
+.text {
+    /* 字体 */
+    font-size: small;
+    word-break: break-all;
+}

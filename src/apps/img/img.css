@@ -1,0 +1,179 @@
+.img_main {
+    /* height: auto; */
+    /* overflow: auto; */
+    /* box-sizing: border-box; */
+    display: grid;
+    grid-template-rows: 3em auto;
+    gap: var(--default_gap);
+}
+
+/* 图片单元格们 */
+.img_grids {
+    overflow: auto;
+    /* width: 100%; */
+    display: grid;
+    /* grid-template-columns: repeat(9, calc((100% / 9) - var(--default_gap))); */
+    gap: var(--default_gap);
+    /* margin: var(--default_padding); */
+    transition: all var(--anim_time_default) linear;
+    outline: none !important;
+    position: relative;
+    /* background-color: var(--color_gray_blue); */
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 图片 */
+.img {
+    /* height: 100%; */
+    border-radius: var(--border_radius_default);
+    /* 设置不允许选中（选中后被蓝色覆盖，难看） */
+    user-select: none;
+    object-fit: contain;
+    /* background-color: var(--color_blue); */
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: inherit;
+    /* transition: all var(--anim_time_default) linear; */
+}
+
+.img:hover {
+    /* 阴影 => |水平阴影（正右负左）|垂直阴影（正下负上）|阴影模糊强度|阴影强度|*/
+    box-shadow: 0em 0em .5em .1em var(--color_blue);
+    /* 小手 */
+    cursor: pointer;
+}
+
+/* 图片-详情页 */
+.img_detail {
+    /* 限制元素的最小宽度 */
+    /* min-width: 12vw; */
+    border: 0;
+    border-radius: var(--border_radius_default);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+    position: absolute;
+
+    /* 这个设置是为了能让鼠标拖动图片，但是设置了这个就无法触发鼠标点击事件 */
+    pointer-events: none;
+}
+
+.img_modal {
+    overflow: auto;
+    border: 0;
+    border-radius: var(--border_radius_default);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: auto;
+}
+
+.img_modal_fullscreen img_modal {
+    /* 设置相对于边距的偏移 */
+    inset: 0em;
+}
+
+/* 隐藏弹窗的滚动条 */
+.img_modal::-webkit-scrollbar {
+    /* inset: 0em; */
+    /* display: none; */
+}
+
+/* 弹窗居中 */
+.ReactModal__Overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 弹窗样式修改 */
+.img_modal_overlay {
+    inset: 0em;
+    position: fixed;
+}
+
+/* 
+@media screen and (max-width: 2000px) {
+    .img_grids {
+        grid-template-columns: repeat(8, calc((100% / 8) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .img_grids {
+        grid-template-columns: repeat(7, calc((100% / 7) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .img_grids {
+        grid-template-columns: repeat(6, calc((100% / 6) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .img_grids {
+        grid-template-columns: repeat(5, calc((100% / 5) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .img_grids {
+        grid-template-columns: repeat(4, calc((100% / 4) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .img_grids {
+        grid-template-columns: repeat(3, calc((100% / 3) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .img_grids {
+        grid-template-columns: repeat(2, calc((100% / 2) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img_grids {
+        grid-template-columns: repeat(1, calc((100% / 1) - var(--default_gap)));
+    }
+} */
+
+/* @media screen and (max-height: 1800px) {
+    .img_grids {
+        grid-template-rows: repeat(5, calc((100% / 5) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-height: 1500px) {
+    .img_grids {
+        grid-template-rows: repeat(4, calc((100% / 4) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-height: 1200px) {
+    .img_grids {
+        grid-template-rows: repeat(3, calc((100% / 3) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .img_grids {
+        grid-template-rows: repeat(2, calc((100% / 2) - var(--default_gap)));
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .img_grids {
+        grid-template-rows: repeat(1, calc((100% / 1) - var(--default_gap)));
+    }
+} */

@@ -1,0 +1,142 @@
+:root {
+    --border_radius: 0.35em;
+}
+
+.menu {
+    width: calc(100% - var(--default_padding));
+    display: flex;
+    flex-direction: column;
+    gap: var(--default_padding);
+
+    border-radius: var(--border_radius);
+    transition: all var(--anim_time_default) linear;
+}
+
+.menu_item {
+    display: grid;
+    grid-template-columns: 2.5em 4fr;
+    grid-template-rows: auto;
+
+    /* 垂直居中 */
+    align-items: center;
+    justify-items: center;
+
+    border-radius: var(--border_radius);
+    transition: all var(--anim_time_default) linear;
+
+    /* 字体 */
+    color: aliceblue;
+
+    cursor: pointer;
+}
+
+.menu_item:hover {
+    background-color: var(--color_yellow);
+
+    /* 阴影 => |水平阴影（正右负左）|垂直阴影（正下负上）|阴影模糊强度|阴影强度|*/
+    box-shadow: var(--shadow_yellow);
+
+    /* 字体 */
+    color: var(--color_blue);
+}
+
+.menu_item_selected {
+    display: grid;
+    grid-template-columns: 2.5em 4fr;
+    grid-template-rows: auto;
+
+    /* 垂直居中 */
+    align-items: center;
+    justify-items: center;
+
+    border-radius: var(--border_radius);
+    transition: all var(--anim_time_default) linear;
+    background-color: var(--color_yellow);
+
+    /* 阴影 => |水平阴影（正右负左）|垂直阴影（正下负上）|阴影模糊强度|阴影强度|*/
+    box-shadow: var(--shadow_yellow);
+
+    /* 字体 */
+    color: var(--color_blue);
+}
+
+/* 菜单-标签 */
+.menu_item_icon {
+    display: flex;
+    /* width: 100%; */
+    /* height: 100%; */
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border_radius);
+}
+
+/* 菜单-标签 */
+.menu_item_label {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /* justify-items: center; */
+    border-radius: var(--border_radius);
+
+    /* 字体 */
+    font-weight: bolder;
+    font-size: normal;
+    font-family: 'Source Han Sans SC VF';
+    /* 设置不允许选中 */
+    user-select: none;
+    word-break: keep-all;
+}
+
+/* ------------------------------------------------------- */
+
+/* logo-标签 */
+.logo_icon {
+    display: grid;
+    /* width: 100%; */
+    /* height: 100%; */
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border_radius);
+}
+
+/* logo-标签 */
+.logo_label {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /* justify-items: center; */
+    border-radius: var(--border_radius);
+
+    /* 字体 */
+    font-size: 1.5em;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 2.5em 4fr;
+    grid-template-rows: auto;
+
+    /* 垂直居中 */
+    align-items: center;
+    justify-items: center;
+
+    border-radius: var(--border_radius);
+    transition: all var(--anim_time_default) linear;
+
+    /* 字体 */
+    color: var(--color_yellow);
+    font-weight: bolder;
+    font-family: var(--font_sans);
+    /* 设置不允许选中 */
+    user-select: none;
+    word-break: keep-all;
+}
+
+.logo:hover {
+    cursor: pointer;
+
+    /* 字体 */
+    color: var(--color_yellow);
+}

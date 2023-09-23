@@ -1,0 +1,13 @@
+/*
+主页面入口样式
+*/
+.entrance_container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto;
+    border-radius: var(--border_radius_default);
+    transition: all var(--anim_time_default) linear;
+    outline: none !important;
+
+}
